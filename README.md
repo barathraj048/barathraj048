@@ -1,77 +1,78 @@
-<h1 align="center">Hi there, I'm Barath M 👋</h1>
-<h3 align="center">Backend-Focused Full-Stack Engineer | Top 10% globally on LeetCode | Open Source Contributor</h3>
+# Barath M
 
-<p align="center">
-  <a href="https://linkedin.com/in/bharath-raj-7992a7248/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="mailto:barathraj048@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://https://leetcode.com/u/barathraj048/" target="_blank">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" />
-  </a>
-</p>
+Founding engineer at [olum.ai](https://olum.ai), where I own the frontend and the backend APIs.
+Moving toward backend and distributed systems - currently writing Go and reading DDIA.
+
+[LinkedIn](https://linkedin.com/in/bharath-raj-7992a7248/) ·
+[LeetCode](https://leetcode.com/u/barathraj048/) ·
+barathraj048@gmail.com
 
 ---
 
-### 👨‍💻 About Me
-- ⚡ **Current Focus:** Architecting low-latency infrastructure, event-driven systems, **System Design**, and real-time distributed computing utilizing **WebSockets**.
-- 🏆 **Problem Solving:** Ranked in the Top 10% globally on LeetCode with a **1,754+** rating (315+ problems solved).
-- 🌍 **Open Source:** Core contributor to massive ecosystems like **n8n** (172K+ users) and **Cal.com** (40K+ users).
-- 🎓 **Education:** Pursuing B.E. in Electronics & Communication Engineering at Anna University (2022-2026).
-- 💼 **Leadership:** Student Chairperson for IETE (18-member team) & Promo Officer for the ECE Association.
+### Now
+
+**Founding engineer, olum.ai.** I own the product surface end to end - the frontend and the
+backend APIs behind it. Small team, so the API contract, the schema, and what the user sees are
+all mine to get right.
+
+- `Olum is an AI-SEO platform that audits a site, then continuously tracks and improves how it surfaces in both Google and AI assistants like ChatGPT - generating the content and fixes to close the gaps.`
+- `~70 endpoints across 12 service groups (auth/billing, analysis pipeline, competitor and social intelligence, AI-visibility tracking) behind a 60-page React app, ~79k LOC; long-running crawl/LLM work runs async with client polling, so interactive reads stay under a ~500ms p95 while analysis runs finish in minutes.`
+- `Argued for DPoP (RFC 9449) sender-constrained tokens on the payment path instead of plain bearer auth: a non-extractable P-256 keypair in IndexedDB signs a fresh proof per request, and the backend matches its thumbprint against cnf.jkt on the token. Our access token already rides in an httpOnly cookie, so XSS can't read it - but it can still call the API from the victim's page; binding the token to a key JS can never export makes a stolen token useless elsewhere. Cost was a refresh-flow rewrite and a WebCrypto dependency, so I scoped it to payments rather than every route.`
+
+Only put a number here if you measured it. One real number beats three vague ones.
+
+### What I'm learning, in order
+
+Go · DDIA (2nd edition) · storage engines · consensus.
+
+I build APIs at work, so the depth is coming from projects: a key-value store in Go with an
+append-only log, CRC-checked records, an index rebuilt from disk on startup, and crash recovery
+that survives `kill -9` mid-write. Benchmarks will include the numbers that aren't flattering.
 
 ---
 
-### 🛠️ Tech Stack & Skills
+### Problem solving
 
-<p align="left">
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <br>
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/ThreeJs-black?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
-</p>
+**1,797 contest rating - top 8.4%, ranked 72,294 of 879,441.** 52 contests attended.
 
-- **Languages:** TypeScript, JavaScript, Python
-- **Frameworks & Libraries:** Node.js, Express.js, Next.js, React.js, Three.js, GSAP, Tailwind CSS
-- **System Design & Architecture:** WebSockets, Event-Driven Architecture, Pub/Sub, Low-Latency Infrastructure, ACID Compliance
-- **Databases & DevOps:** PostgreSQL, MongoDB, Redis, Docker, Linux (Ubuntu), WSL, Vercel
+329 problems solved: 207 medium, 26 hard. 156 active days in the past year.
 
 ---
 
-### 🔥 High-Impact Open Source
-* **n8n (230K+ Active Global Users):** Patched an enterprise data corruption bug in core deepCopy, engineered a hybrid secrets notation parser, and resolved Windows CI failures and CORS iframe polling issues.
-* **Cal.com (1M+ Signed-in Users):** Fixed a v6.2 layout regression and engineered a fault-tolerant booking flow to eliminate silent API timeouts.
+### Open source
+
+**n8n** *(230k+ active global users)* - five pull requests, none merged. Four were triaged as valid and assigned to internal teams ([#28561](https://github.com/n8n-io/n8n/pull/28561), [#29203](https://github.com/n8n-io/n8n/pull/29203), [#29415](https://github.com/n8n-io/n8n/pull/29415), [#30151](https://github.com/n8n-io/n8n/pull/30151)). What I found: a `Date` serialisation bug in core `deepCopy`, a gap in hybrid dot/bracket notation in the secrets parser, cross-platform path handling that broke Windows CI, and workflow layout coordinates being dropped on save.
+
+Finding real bugs in a 200k-star codebase was the easy half. Landing a patch in a subsystem with an internal owner is the hard half, and I got that wrong five times before I understood why - untested diffs, scope too wide, and writing code before a maintainer had replied. I now comment on the issue and wait for agreement before opening anything.
+
+**Cal.com** *(1M+ signed-in users)* - one merged pull request ([#27251](https://github.com/calcom/cal.com/pull/27251)): a padding fix on `VerticalTabItem`.
+
+### Projects
+
+**In-memory trading engine** - Node.js, Redis, WebSockets. Order matching with an in-memory
+book. Load-tested at 1,000 req/s across 500 virtual users: p95 21.9 ms, 0 errors.
+
+**Distributed task pipeline** - Redis producer/consumer with per-task idempotency. Pub/Sub and
+WebSocket fan-out instead of HTTP polling. Containerised with Docker.
+
+**Care Ops** - healthcare ERP, built in a 48-hour hackathon (top 10). 367 req/s at 100 virtual
+users, no timeouts under load.
 
 ---
 
-### 🚀 Featured Architecture & Projects
-* **High-Frequency Trading Architecture:** Engineered an in-memory trading engine using Node.js, Next.js, Redis, and **WebSockets**. Load-tested at 1,000 req/s across 500 VUs with a p95 latency of 21.9ms and 0% errors.
-* **Ravan Creatives Website Redesign:** Engineered a highly interactive, modernized web experience utilizing **Three.js**, **GSAP**, and **Tailwind CSS**. Delivered a complete architectural overhaul that resolved business-critical frontend bugs and elevated visual performance.
-* **Distributed Task Execution Pipeline:** Architected a Redis producer-consumer pipeline with per-task idempotency, eliminating HTTP polling overhead via Pub/Sub and **WebSocket** fan-out, containerized with Docker.
-* **Care Ops (Healthcare ERP SaaS):** Shipped in 48 hours, earning a Top 10 Appreciation Certificate. Validated 367 req/s at 100 VUs with zero timeouts under load.
+### Tech
+
+**Languages** TypeScript · JavaScript · Python · Go
+**Frontend** Next.js · React · Tailwind
+**Backend** Node.js · Express · WebSockets · Pub/Sub · REST API design
+**Data** PostgreSQL · Redis · MongoDB
+**Infra** Docker · Linux · Vercel
 
 ---
 
+### Background
 
-## 🐍 Contribution Snake
+B.E. Electronics & Communication Engineering, P. A. College of Engineering and Technology
+(Anna University), 2022–2026.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/barathraj048/barathraj048/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
-</p>
-
-### 📈 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=barathraj048&show_icons=true&theme=transparent&hide_border=true&title_color=FFA116&icon_color=FFA116" alt="Barath's GitHub Stats" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=barathraj048&theme=transparent&hide_border=true&ring=FFA116&fire=FFA116&currStreakLabel=FFA116" alt="Barath's GitHub Streak" width="48%" />
-</p>
+Student Chairperson, IETE - 18-member team.
