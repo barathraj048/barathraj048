@@ -1,6 +1,6 @@
 # Barath M
 
-Founding engineer at [olum.ai](https://olum.ai). I own the product end to end: the React app,
+Software engineer at [olum.ai](https://olum.ai). I own the product end to end: the React app,
 the API layer behind it, and now a Go service for olum.video. The work I care about is the work
 that matters under load and failure: idempotency, auth on the money path, and what is still on
 disk after a crash.
