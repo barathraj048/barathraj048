@@ -13,7 +13,7 @@ barathraj048@gmail.com
 
 ---
 
-### Node.js core
+### Node.js core 
 
 **[nodejs/node#65952](https://github.com/nodejs/node/pull/65952)**: `http: don't destroy socket after request completes`.
 Merged. Reviewed by [@mcollina](https://github.com/mcollina) and [@jasnell](https://github.com/jasnell).
